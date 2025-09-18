@@ -47,11 +47,11 @@ build-verifier:
 	cd contracts/verifier && scarb build
 
 declare-verifier:
-	cd contracts && sncast declare --contract-name UltraStarknetHonkVerifier
+	cd contracts && sncast declare --contract-name UltraStarknetHonkVerifier  --network sepolia
 
 deploy-verifier:
 	# TODO: use class hash from the result of the `make declare-verifier` step
-	cd contracts && sncast deploy --salt 0x00 --class-hash 0x074b93dc3cddcd328f8b242b782deef775d60b0ff494a1f71c315ea579d15941
+	cd contracts && sncast deploy --salt 0x00 --class-hash 0x74b93dc3cddcd328f8b242b782deef775d60b0ff494a1f71c315ea579d15941 --network sepolia
 
 artifacts:
 	cp ./circuit/target/circuit.json ./app/src/assets/circuit.json

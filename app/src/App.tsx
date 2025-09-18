@@ -126,8 +126,8 @@ function App() {
 
       // Send transaction
       updateState(ProofState.SendingTransaction);
-
-      const provider = new RpcProvider({ nodeUrl: 'http://127.0.0.1:5050/rpc' });
+// https://didactic-space-engine-56g7wwg96vxhpvjq-5050.app.github.dev/
+      const provider = new RpcProvider({ nodeUrl: 'https://didactic-space-engine-56g7wwg96vxhpvjq-5050.app.github.dev/rpc' });
       // TODO: use conract address from the result of the `make deploy-verifier` step
       const contractAddress = '0x02b76ac09aea8957666f0fb3409b091e2bdca99700273af44358bd2ed0e14a32';
       const verifierContract = new Contract(verifierAbi, contractAddress, provider);
